@@ -40,7 +40,8 @@ Build a high returnable website for My Dentist dental clinic in Zirakpur, Punjab
 - Hero section with compelling headline and trust badges
 - Services grid (9 services with icons)
 - About section with clinic stats
-- Gallery showcasing clinic images
+- **Doctor profile section with authentic photo of Dr. Amarjit Singh**
+- Gallery showcasing 5 clinic images (including branding wall)
 - Testimonials section with patient reviews
 - Contact section with location, phone, email, working hours
 - FAQ accordion with common questions
@@ -56,12 +57,14 @@ Build a high returnable website for My Dentist dental clinic in Zirakpur, Punjab
 - Glassmorphism effects
 - Gradient buttons and accents
 - Professional layout with generous whitespace
+- **Authentic clinic photos including doctor's professional image**
 
 **Mock Data Includes:**
 - Business information
 - 9 dental services
+- Doctor profile (Dr. Amarjit Singh - BDS, MDS with 10+ years experience)
 - 4 patient testimonials
-- 4 clinic gallery images
+- 5 clinic gallery images (treatment rooms, reception, branding wall)
 - 5 FAQs
 
 ### 🔄 Phase 2: Backend Development (Planned)
