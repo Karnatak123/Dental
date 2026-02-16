@@ -64,12 +64,6 @@ export const services = [
     title: "Fillings & Sealants",
     description: "Protect and restore your teeth from decay",
     icon: "Shield"
-  },
-  {
-    id: 9,
-    title: "Online Booking",
-    description: "Book your appointment easily through our website",
-    icon: "Calendar"
   }
 ];
 
