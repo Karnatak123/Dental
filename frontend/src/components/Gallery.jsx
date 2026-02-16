@@ -19,12 +19,14 @@ export const Gallery = () => {
         </div>
 
         {/* Gallery grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {galleryImages.map((image, index) => (
             <div
               key={image.id}
               className={`group relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 ${
-                index === 0 ? 'md:col-span-2' : ''
+                index === 0 ? 'md:col-span-2 lg:col-span-2' : ''
+              } ${
+                index === 4 ? 'md:col-span-2 lg:col-span-1' : ''
               }`}
             >
               <div className="relative aspect-video overflow-hidden">

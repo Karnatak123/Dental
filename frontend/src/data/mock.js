@@ -122,8 +122,28 @@ export const galleryImages = [
     id: 4,
     url: "https://customer-assets.emergentagent.com/job_e06482ed-027d-4917-8fe0-1aef6c7e988f/artifacts/z47plzfd_my-dentist-zirakpur-dentists-f8g4la85hq.avif",
     alt: "Clinic Facilities"
+  },
+  {
+    id: 5,
+    url: "https://customer-assets.emergentagent.com/job_dental-pro-hub/artifacts/kk77p3gd_my%20dentist.jpg",
+    alt: "Clinic Information Wall"
   }
 ];
+
+export const doctorInfo = {
+  name: "Dr. Amarjit Singh",
+  designation: "Chief Dental Surgeon",
+  qualification: "BDS, MDS (Orthodontics)",
+  experience: "10+ Years",
+  image: "https://customer-assets.emergentagent.com/job_dental-pro-hub/artifacts/asdfjqpy_doctor12.png",
+  specialties: [
+    "Orthodontics & Dental Implants",
+    "Cosmetic Dentistry",
+    "Root Canal Treatment",
+    "Teeth Whitening Specialist"
+  ],
+  about: "With over a decade of experience in dentistry, Dr. Amarjit Singh is committed to providing comprehensive dental care with a gentle touch. His expertise in advanced dental procedures combined with a patient-first approach has made My Dentist a trusted name in Zirakpur."
+};
 
 export const faqs = [
   {

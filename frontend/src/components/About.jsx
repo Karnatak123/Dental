@@ -1,5 +1,6 @@
 import React from 'react';
-import { Heart, Users, Trophy, Star } from 'lucide-react';
+import { Heart, Users, Trophy, Star, Award, GraduationCap } from 'lucide-react';
+import { doctorInfo } from '../data/mock';
 
 export const About = () => {
   const stats = [
@@ -11,7 +12,8 @@ export const About = () => {
 
   return (
     <section id="about" className="py-20 px-4 bg-gradient-to-br from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto space-y-20">
+        {/* About Clinic Section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Image */}
           <div className="relative">
@@ -90,6 +92,88 @@ export const About = () => {
                 ))}
               </ul>
             </div>
+          </div>
+        </div>
+
+        {/* Meet Our Dentist Section */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left - Content */}
+          <div className="space-y-6 order-2 lg:order-1">
+            <div>
+              <span className="px-4 py-2 bg-teal-100 text-teal-600 rounded-full text-sm font-semibold inline-block mb-4">
+                Meet Our Expert
+              </span>
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                {doctorInfo.name}
+              </h2>
+              <p className="text-xl text-pink-600 font-semibold mb-2">{doctorInfo.designation}</p>
+              <div className="flex items-center space-x-4 text-gray-600 mb-6">
+                <div className="flex items-center">
+                  <GraduationCap className="w-5 h-5 mr-2 text-teal-500" />
+                  <span>{doctorInfo.qualification}</span>
+                </div>
+                <div className="flex items-center">
+                  <Award className="w-5 h-5 mr-2 text-pink-500" />
+                  <span>{doctorInfo.experience}</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-lg text-gray-600 leading-relaxed">
+              {doctorInfo.about}
+            </p>
+
+            <div className="space-y-4 pt-4">
+              <h3 className="text-lg font-bold text-gray-900">Specializations</h3>
+              <ul className="space-y-3">
+                {doctorInfo.specialties.map((specialty, index) => (
+                  <li key={index} className="flex items-start">
+                    <div className="w-6 h-6 rounded-full bg-gradient-to-br from-teal-500 to-pink-400 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                      <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <span className="text-gray-700">{specialty}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="pt-6">
+              <div className="bg-gradient-to-br from-pink-50 to-teal-50 rounded-2xl p-6 border-2 border-pink-200">
+                <p className="text-gray-700 italic">
+                  "Your smile is our priority. We combine expertise with compassion to deliver exceptional dental care that you can trust."
+                </p>
+                <p className="text-gray-900 font-semibold mt-3">- {doctorInfo.name}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right - Doctor Image */}
+          <div className="relative order-1 lg:order-2">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <img
+                src={doctorInfo.image}
+                alt={doctorInfo.name}
+                className="w-full h-full object-cover"
+              />
+              {/* Overlay badge */}
+              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl">
+                <div className="text-center">
+                  <p className="text-sm text-gray-600 mb-1">Trusted by</p>
+                  <p className="text-3xl font-bold text-gray-900 mb-1">5000+ Patients</p>
+                  <div className="flex justify-center items-center space-x-1 mt-2">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Decorative elements */}
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-teal-400/20 rounded-full blur-2xl"></div>
+            <div className="absolute -top-6 -left-6 w-32 h-32 bg-pink-400/20 rounded-full blur-2xl"></div>
           </div>
         </div>
       </div>
