@@ -108,10 +108,12 @@ export const About = () => {
               </h2>
               <p className="text-xl text-pink-600 font-semibold mb-2">{doctorInfo.designation}</p>
               <div className="flex items-center space-x-4 text-gray-600 mb-6">
-                <div className="flex items-center">
-                  <GraduationCap className="w-5 h-5 mr-2 text-teal-500" />
-                  <span>{doctorInfo.qualification}</span>
-                </div>
+                {doctorInfo.qualification && (
+                  <div className="flex items-center">
+                    <GraduationCap className="w-5 h-5 mr-2 text-teal-500" />
+                    <span>{doctorInfo.qualification}</span>
+                  </div>
+                )}
                 <div className="flex items-center">
                   <Award className="w-5 h-5 mr-2 text-pink-500" />
                   <span>{doctorInfo.experience}</span>
