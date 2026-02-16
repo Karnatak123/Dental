@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Clock, ChevronDown, ChevronUp } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 import { businessInfo, faqs } from '../data/mock';
 import {
   Accordion,
@@ -7,8 +7,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from './ui/accordion';
+import { Button } from './ui/button';
 
 export const Contact = ({ onBookingClick }) => {
+  const handleWhatsAppClick = () => {
+    window.open(businessInfo.whatsappLink, '_blank');
+  };
+
   return (
     <section id="contact" className="py-20 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -51,15 +56,25 @@ export const Contact = ({ onBookingClick }) => {
                   <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
                     <Phone className="w-6 h-6 text-teal-600" />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h3 className="font-bold text-gray-900 mb-2">Phone Number</h3>
-                    <a
-                      href={`tel:${businessInfo.phone}`}
-                      className="text-teal-600 font-semibold text-lg hover:underline"
-                    >
-                      {businessInfo.phone}
-                    </a>
-                    <p className="text-sm text-gray-500 mt-1">Call us for immediate assistance</p>
+                    <div className="flex items-center space-x-3">
+                      <a
+                        href={`tel:${businessInfo.phone}`}
+                        className="text-teal-600 font-semibold text-lg hover:underline"
+                      >
+                        {businessInfo.phone}
+                      </a>
+                      <Button
+                        onClick={handleWhatsAppClick}
+                        size="sm"
+                        className="bg-[#25D366] hover:bg-[#20BA5A] text-white"
+                      >
+                        <MessageCircle className="w-4 h-4 mr-2" />
+                        WhatsApp
+                      </Button>
+                    </div>
+                    <p className="text-sm text-gray-500 mt-2">Call or chat for immediate assistance</p>
                   </div>
                 </div>
               </div>
@@ -134,12 +149,21 @@ export const Contact = ({ onBookingClick }) => {
 
               <div className="mt-8 p-6 bg-gradient-to-br from-pink-500 to-teal-400 rounded-2xl text-white text-center">
                 <p className="text-lg mb-4">Still have questions?</p>
-                <button
-                  onClick={onBookingClick}
-                  className="bg-white text-pink-600 px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-shadow"
-                >
-                  Book a Consultation
-                </button>
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <button
+                    onClick={onBookingClick}
+                    className="bg-white text-pink-600 px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-shadow"
+                  >
+                    Book a Consultation
+                  </button>
+                  <button
+                    onClick={handleWhatsAppClick}
+                    className="bg-[#25D366] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#20BA5A] transition-colors flex items-center justify-center"
+                  >
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    Chat on WhatsApp
+                  </button>
+                </div>
               </div>
             </div>
           </div>

@@ -8,6 +8,7 @@ import { Testimonials } from '../components/Testimonials';
 import { Contact } from '../components/Contact';
 import { Footer } from '../components/Footer';
 import { BookingModal } from '../components/BookingModal';
+import { WhatsAppButton } from '../components/WhatsAppButton';
 import { Toaster } from '../components/ui/sonner';
 
 export const Home = () => {
@@ -32,6 +33,7 @@ export const Home = () => {
       <Contact onBookingClick={handleBookingClick} />
       <Footer />
       <BookingModal isOpen={isBookingModalOpen} onClose={handleCloseBooking} />
+      <WhatsAppButton />
       <Toaster />
     </div>
   );

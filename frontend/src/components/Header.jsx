@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Menu, X } from 'lucide-react';
+import { Phone, Menu, X, MessageCircle } from 'lucide-react';
 import { Button } from './ui/button';
 import { businessInfo } from '../data/mock';
 
@@ -12,6 +12,10 @@ export const Header = ({ onBookingClick }) => {
       element.scrollIntoView({ behavior: 'smooth' });
       setMobileMenuOpen(false);
     }
+  };
+
+  const handleWhatsAppClick = () => {
+    window.open(businessInfo.whatsappLink, '_blank');
   };
 
   return (
@@ -60,15 +64,25 @@ export const Header = ({ onBookingClick }) => {
             </button>
           </nav>
 
-          {/* Right side - Phone & CTA */}
+          {/* Right side - Phone, WhatsApp & CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <a
-              href={`tel:${businessInfo.phone}`}
-              className="flex items-center text-gray-700 hover:text-pink-500 transition-colors"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              <span className="font-semibold">{businessInfo.phone}</span>
-            </a>
+            <div className="flex items-center space-x-2">
+              <a
+                href={`tel:${businessInfo.phone}`}
+                className="flex items-center text-gray-700 hover:text-pink-500 transition-colors"
+                title="Call us"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                <span className="font-semibold">{businessInfo.phone}</span>
+              </a>
+              <button
+                onClick={handleWhatsAppClick}
+                className="p-2 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full transition-colors"
+                title="Chat on WhatsApp"
+              >
+                <MessageCircle className="w-5 h-5" />
+              </button>
+            </div>
             <Button
               onClick={onBookingClick}
               className="bg-gradient-to-r from-pink-500 to-teal-400 hover:from-pink-600 hover:to-teal-500 text-white shadow-lg hover:shadow-xl transition-all duration-300"
@@ -120,13 +134,21 @@ export const Header = ({ onBookingClick }) => {
               >
                 Contact
               </button>
-              <a
-                href={`tel:${businessInfo.phone}`}
-                className="flex items-center text-gray-700 hover:text-pink-500 transition-colors"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                <span className="font-semibold">{businessInfo.phone}</span>
-              </a>
+              <div className="flex items-center space-x-3">
+                <a
+                  href={`tel:${businessInfo.phone}`}
+                  className="flex items-center text-gray-700 hover:text-pink-500 transition-colors"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  <span className="font-semibold">{businessInfo.phone}</span>
+                </a>
+                <button
+                  onClick={handleWhatsAppClick}
+                  className="p-2 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full transition-colors"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                </button>
+              </div>
               <Button
                 onClick={onBookingClick}
                 className="bg-gradient-to-r from-pink-500 to-teal-400 hover:from-pink-600 hover:to-teal-500 text-white"

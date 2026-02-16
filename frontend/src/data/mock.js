@@ -3,6 +3,8 @@
 export const businessInfo = {
   name: "My Dentist",
   phone: "9988556934",
+  whatsappNumber: "919988556934",
+  whatsappLink: "https://wa.me/919988556934",
   email: "contact@mydentist.com",
   address: "SCO 10, Riverdale Business Centre, Highland Marg",
   addressLine2: "opposite RIVERDALE APARTMENT, near Airforce Station",
@@ -103,11 +105,6 @@ export const testimonials = [
 ];
 
 export const galleryImages = [
-  {
-    id: 1,
-    url: "https://customer-assets.emergentagent.com/job_e06482ed-027d-4917-8fe0-1aef6c7e988f/artifacts/abmcuu60_images.jpeg",
-    alt: "My Dentist Clinic Overview"
-  },
   {
     id: 2,
     url: "https://customer-assets.emergentagent.com/job_e06482ed-027d-4917-8fe0-1aef6c7e988f/artifacts/51hldder_my-dentist-chandigarh-1484314970-5878d95ae776f.jpg",
