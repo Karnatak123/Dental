@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Dentist - Premium Dental Care in Zirakpur. Expert dental services including teeth whitening, implants, cosmetic procedures, and emergency care.">
+    <meta name="keywords" content="dentist, dental clinic, Zirakpur, teeth whitening, dental implants, cosmetic dentistry">
+    <title>My Dentist - Premium Dental Care in Zirakpur</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-my">my</span><span class="logo-dentist">Dentist</span>
+                </div>
+                
+                <nav class="nav-desktop">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <div class="phone-wrapper">
+                        <a href="tel:9988556934" class="phone-link">
+                            <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            <span>9988556934</span>
+                        </a>
+                        <button onclick="window.open('https://wa.me/919988556934', '_blank')" class="whatsapp-btn-header" title="Chat on WhatsApp">
+                            <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <button onclick="openBookingModal()" class="btn-primary">Book Appointment</button>
+                </div>
+                
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <svg class="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    <svg class="close-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <nav class="nav-mobile hidden">
+                <a href="#home" class="nav-link" onclick="closeMobileMenu()">Home</a>
+                <a href="#services" class="nav-link" onclick="closeMobileMenu()">Services</a>
+                <a href="#about" class="nav-link" onclick="closeMobileMenu()">About</a>
+                <a href="#gallery" class="nav-link" onclick="closeMobileMenu()">Gallery</a>
+                <a href="#contact" class="nav-link" onclick="closeMobileMenu()">Contact</a>
+                <div class="mobile-contact">
+                    <a href="tel:9988556934" class="phone-link">
+                        <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                        <span>9988556934</span>
+                    </a>
+                    <button onclick="window.open('https://wa.me/919988556934', '_blank')" class="whatsapp-btn-header">
+                        <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                        </svg>
+                    </button>
+                </div>
+                <button onclick="openBookingModal(); closeMobileMenu();" class="btn-primary">Book Appointment</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg-blur hero-bg-blur-1"></div>
+        <div class="hero-bg-blur hero-bg-blur-2"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="badge">✨ Premium Dental Care in Zirakpur</span>
+                    <h1 class="hero-title">
+                        Your Perfect Smile<br>
+                        <span class="gradient-text">Starts Here</span>
+                    </h1>
+                    <p class="hero-description">
+                        Experience world-class dental care with our expert team. From routine check-ups to advanced cosmetic procedures, we're committed to your oral health.
+                    </p>
+                    <div class="hero-buttons">
+                        <button onclick="openBookingModal()" class="btn-primary btn-large">
+                            <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                            Book Appointment
+                        </button>
+                        <a href="#services" class="btn-outline btn-large">Our Services</a>
+                    </div>
+                    <div class="trust-badges">
+                        <div class="badge-item">
+                            <svg class="badge-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                            </svg>
+                            <p class="badge-text">Certified<br><small>Professionals</small></p>
+                        </div>
+                        <div class="badge-item">
+                            <svg class="badge-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                            <p class="badge-text">Safe &<br><small>Hygienic</small></p>
+                        </div>
+                        <div class="badge-item">
+                            <svg class="badge-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <p class="badge-text">Emergency<br><small>Care</small></p>
+                        </div>
+                        <div class="badge-item">
+                            <svg class="badge-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                            <p class="badge-text">Easy<br><small>Booking</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://customer-assets.emergentagent.com/job_e06482ed-027d-4917-8fe0-1aef6c7e988f/artifacts/uei3jt1k_my-dentist-clinic-zirakpur-dentists-uh4k8tpv3w.jpg" alt="My Dentist Clinic">
+                    <div class="hero-badge">
+                        <p class="badge-label">Trusted by</p>
+                        <p class="badge-value">5000+ Patients</p>
+                        <div class="badge-avatars">
+                            <div class="avatar avatar-1"></div>
+                            <div class="avatar avatar-2"></div>
+                            <div class="avatar avatar-3"></div>
+                        </div>
+                    </div>
+                    <div class="floating-card">
+                        <svg class="card-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                        </svg>
+                        <div>
+                            <p class="card-label">Rating</p>
+                            <p class="card-value">4.9/5.0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-teal">Our Services</span>
+                <h2 class="section-title">Comprehensive Dental Care</h2>
+                <p class="section-description">From preventive care to advanced treatments, we offer a full range of dental services</p>
+            </div>
+            <div class="services-grid">
+                <!-- Service cards will be inserted by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section section-gray">
+        <div class="container">
+            <!-- About Clinic -->
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://customer-assets.emergentagent.com/job_e06482ed-027d-4917-8fe0-1aef6c7e988f/artifacts/51hldder_my-dentist-chandigarh-1484314970-5878d95ae776f.jpg" alt="Dental Treatment Room">
+                </div>
+                <div class="about-content">
+                    <span class="badge">About Us</span>
+                    <h2 class="section-title">
+                        Where Expertise Meets<br>
+                        <span class="gradient-text">Compassionate Care</span>
+                    </h2>
+                    <p class="about-text">
+                        At My Dentist, we believe that everyone deserves a healthy, beautiful smile. Located in the heart of Zirakpur, our state-of-the-art clinic combines advanced dental technology with a warm, welcoming environment.
+                    </p>
+                    <p class="about-text">
+                        Our team of experienced dental professionals is dedicated to providing personalized care tailored to your unique needs. From routine check-ups to complex procedures, we ensure every visit is comfortable and stress-free.
+                    </p>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <svg class="stat-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                            <p class="stat-value">5000+</p>
+                            <p class="stat-label">Happy Patients</p>
+                        </div>
+                        <div class="stat-card">
+                            <svg class="stat-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                            <p class="stat-value">10+</p>
+                            <p class="stat-label">Years Experience</p>
+                        </div>
+                        <div class="stat-card">
+                            <svg class="stat-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                            </svg>
+                            <p class="stat-value">4.9</p>
+                            <p class="stat-label">Average Rating</p>
+                        </div>
+                        <div class="stat-card">
+                            <svg class="stat-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            </svg>
+                            <p class="stat-value">100%</p>
+                            <p class="stat-label">Care & Dedication</p>
+                        </div>
+                    </div>
+                    <div class="why-choose">
+                        <h3 class="why-title">Why Choose Us?</h3>
+                        <ul class="why-list">
+                            <li class="why-item">
+                                <span class="checkmark">✓</span>
+                                Modern equipment & advanced techniques
+                            </li>
+                            <li class="why-item">
+                                <span class="checkmark">✓</span>
+                                Experienced & caring dental professionals
+                            </li>
+                            <li class="why-item">
+                                <span class="checkmark">✓</span>
+                                Comfortable & hygienic environment
+                            </li>
+                            <li class="why-item">
+                                <span class="checkmark">✓</span>
+                                Affordable pricing with flexible payment options
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor Section -->
+            <div class="doctor-section">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <span class="badge badge-teal">Meet Our Expert</span>
+                        <h2 class="section-title">Dr. Manmeet Singh</h2>
+                        <p class="doctor-designation">Chief Dental Surgeon</p>
+                        <div class="doctor-info">
+                            <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                            </svg>
+                            <span>10+ Years</span>
+                        </div>
+                        <p class="about-text">
+                            With over a decade of experience in dentistry, Dr. Manmeet Singh is committed to providing comprehensive dental care with a gentle touch. His expertise in advanced dental procedures combined with a patient-first approach has made My Dentist a trusted name in Zirakpur.
+                        </p>
+                        <div class="specialties">
+                            <h3 class="why-title">Specializations</h3>
+                            <ul class="why-list">
+                                <li class="why-item">
+                                    <span class="checkmark">✓</span>
+                                    Orthodontics & Dental Implants
+                                </li>
+                                <li class="why-item">
+                                    <span class="checkmark">✓</span>
+                                    Cosmetic Dentistry
+                                </li>
+                                <li class="why-item">
+                                    <span class="checkmark">✓</span>
+                                    Root Canal Treatment
+                                </li>
+                                <li class="why-item">
+                                    <span class="checkmark">✓</span>
+                                    Teeth Whitening Specialist
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="doctor-quote">
+                            <p class="quote-text">
+                                "Your smile is our priority. We combine expertise with compassion to deliver exceptional dental care that you can trust."
+                            </p>
+                            <p class="quote-author">- Dr. Manmeet Singh</p>
+                        </div>
+                    </div>
+                    <div class="about-image doctor-image">
+                        <img src="https://customer-assets.emergentagent.com/job_dental-pro-hub/artifacts/asdfjqpy_doctor12.png" alt="Dr. Manmeet Singh">
+                        <div class="doctor-badge">
+                            <p class="badge-label">Trusted by</p>
+                            <p class="badge-value-large">5000+ Patients</p>
+                            <div class="rating-stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Our Clinic</span>
+                <h2 class="section-title">Modern Facilities & Comfortable Environment</h2>
+                <p class="section-description">Take a virtual tour of our state-of-the-art dental clinic</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://customer-assets.emergentagent.com/job_e06482ed-027d-4917-8fe0-1aef6c7e988f/artifacts/51hldder_my-dentist-chandigarh-1484314970-5878d95ae776f.jpg" alt="Dental Treatment Room">
+                    <div class="gallery-overlay">
+                        <p>Dental Treatment Room</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://customer-assets.emergentagent.com/job_e06482ed-027d-4917-8fe0-1aef6c7e988f/artifacts/uei3jt1k_my-dentist-clinic-zirakpur-dentists-uh4k8tpv3w.jpg" alt="Modern Reception Area">
+                    <div class="gallery-overlay">
+                        <p>Modern Reception Area</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://customer-assets.emergentagent.com/job_e06482ed-027d-4917-8fe0-1aef6c7e988f/artifacts/z47plzfd_my-dentist-zirakpur-dentists-f8g4la85hq.avif" alt="Clinic Facilities">
+                    <div class="gallery-overlay">
+                        <p>Clinic Facilities</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://customer-assets.emergentagent.com/job_dental-pro-hub/artifacts/kk77p3gd_my%20dentist.jpg" alt="Clinic Information Wall">
+                    <div class="gallery-overlay">
+                        <p>Clinic Information Wall</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-info">
+                <div class="info-card">
+                    <div class="info-icon">🦷</div>
+                    <h3 class="info-title">Advanced Equipment</h3>
+                    <p class="info-text">Latest dental technology for precise treatments</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">✨</div>
+                    <h3 class="info-title">Hygienic Standards</h3>
+                    <p class="info-text">Maintaining highest levels of cleanliness</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">😊</div>
+                    <h3 class="info-title">Comfortable Space</h3>
+                    <p class="info-text">Relaxing environment for stress-free visits</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-teal">Testimonials</span>
+                <h2 class="section-title">What Our Patients Say</h2>
+                <p class="section-description">Real experiences from real people who trust us with their dental care</p>
+            </div>
+            <div class="testimonials-grid">
+                <!-- Testimonials will be inserted by JavaScript -->
+            </div>
+            <div class="overall-rating">
+                <div class="rating-stars-large">
+                    <span class="star-large">★</span>
+                    <span class="star-large">★</span>
+                    <span class="star-large">★</span>
+                    <span class="star-large">★</span>
+                    <span class="star-large">★</span>
+                </div>
+                <p class="rating-value">4.9 out of 5</p>
+                <p class="rating-count">Based on 500+ reviews</p>
+                <p class="rating-text">Join thousands of satisfied patients who have transformed their smiles with us</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Get In Touch</span>
+                <h2 class="section-title">Visit Us Today</h2>
+                <p class="section-description">We're here to answer your questions and schedule your appointment</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-left">
+                    <div class="contact-cards">
+                        <div class="contact-card contact-card-pink">
+                            <svg class="contact-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <div>
+                                <h3 class="contact-title">Our Location</h3>
+                                <p class="contact-text">
+                                    SCO 10, Riverdale Business Centre, Highland Marg<br>
+                                    opposite RIVERDALE APARTMENT, near Airforce Station<br>
+                                    Zirakpur, Nabha, Punjab 140603
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-card contact-card-teal">
+                            <svg class="contact-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            <div class="contact-phone-wrapper">
+                                <h3 class="contact-title">Phone Number</h3>
+                                <div class="contact-phone-actions">
+                                    <a href="tel:9988556934" class="contact-phone">9988556934</a>
+                                    <button onclick="window.open('https://wa.me/919988556934', '_blank')" class="btn-whatsapp-small">
+                                        <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                                        </svg>
+                                        WhatsApp
+                                    </button>
+                                </div>
+                                <p class="contact-subtext">Call or chat for immediate assistance</p>
+                            </div>
+                        </div>
+                        <div class="contact-card contact-card-pink">
+                            <svg class="contact-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <div>
+                                <h3 class="contact-title">Email Address</h3>
+                                <a href="mailto:contact@mydentist.com" class="contact-email">contact@mydentist.com</a>
+                                <p class="contact-subtext">Send us your queries</p>
+                            </div>
+                        </div>
+                        <div class="contact-card contact-card-teal">
+                            <svg class="contact-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <div>
+                                <h3 class="contact-title">Working Hours</h3>
+                                <p class="contact-text">
+                                    <strong>Mon - Fri:</strong> 9:00 AM - 8:00 PM<br>
+                                    <strong>Saturday:</strong> 9:00 AM - 6:00 PM<br>
+                                    <strong>Sunday:</strong> 10:00 AM - 4:00 PM
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.1234567890!2d76.8201234567890!3d30.6401234567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDM4JzI0LjQiTiA3NsKwNDknMTIuNCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <div class="faq-container">
+                        <h3 class="faq-title">Frequently Asked Questions</h3>
+                        <div class="accordion">
+                            <!-- FAQ items will be inserted by JavaScript -->
+                        </div>
+                        <div class="faq-cta">
+                            <p class="faq-cta-text">Still have questions?</p>
+                            <div class="faq-cta-buttons">
+                                <button onclick="openBookingModal()" class="btn-cta-white">Book a Consultation</button>
+                                <button onclick="window.open('https://wa.me/919988556934', '_blank')" class="btn-cta-whatsapp">
+                                    <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                                    </svg>
+                                    Chat on WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-logo">
+                        <span class="logo-my">my</span><span class="logo-dentist-footer">Dentist</span>
+                    </h3>
+                    <p class="footer-text">
+                        Your trusted partner for comprehensive dental care in Zirakpur. Creating beautiful smiles with expert care.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Teeth Whitening</a></li>
+                        <li><a href="#services">Dental Implants</a></li>
+                        <li><a href="#services">Cosmetic Procedures</a></li>
+                        <li><a href="#services">Emergency Care</a></li>
+                        <li><a href="#services">Regular Check-ups</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            </svg>
+                            <span>SCO 10, Riverdale Business Centre, Highland Marg, opposite RIVERDALE APARTMENT, near Airforce Station, Zirakpur, Nabha, Punjab 140603</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            <a href="tel:9988556934">9988556934</a>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <a href="mailto:contact@mydentist.com">contact@mydentist.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 My Dentist. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <button onclick="window.open('https://wa.me/919988556934', '_blank')" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+        </svg>
+        <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+    </button>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">
+                    <span class="gradient-text">Book Your Appointment</span>
+                </h2>
+                <button onclick="closeBookingModal()" class="modal-close">&times;</button>
+            </div>
+            <p class="modal-description">Fill in your details and we'll get back to you shortly to confirm your appointment</p>
+            <form id="bookingForm" class="booking-form">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="9988556934">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Preferred Date *</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Preferred Time *</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="service">Select Service</label>
+                    <select id="service" name="service">
+                        <option value="">Choose a service</option>
+                        <option value="teeth-whitening">Teeth Whitening</option>
+                        <option value="checkup">Regular Check-up</option>
+                        <option value="cosmetic">Cosmetic Procedures</option>
+                        <option value="implants">Dental Implants</option>
+                        <option value="crowns">Crowns & Bridges</option>
+                        <option value="emergency">Emergency Care</option>
+                        <option value="extraction">Extractions</option>
+                        <option value="fillings">Fillings & Sealants</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Additional Notes</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Any specific concerns or questions?"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary btn-large btn-full">
+                        <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                        Request Appointment
+                    </button>
+                    <button type="button" onclick="closeBookingModal()" class="btn-outline btn-large">Cancel</button>
+                </div>
+                <p class="form-note">We'll contact you within 24 hours to confirm your appointment</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <span class="toast-title">Success!</span>
+            <span class="toast-message">Appointment request received! We'll contact you shortly to confirm.</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
